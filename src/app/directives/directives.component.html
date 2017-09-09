@@ -1,0 +1,11 @@
+<p>
+  directives works!
+</p>
+<button class="btn btn-danger" (click)="onClickTogglePara($event)" > Show Details </button>
+<p *ngIf="showPara; else defaultPara">Secret = I love my bawa so very much </p>
+<ng-template #defaultPara>
+  <p>I love you bawe </p>
+</ng-template>
+<ul>
+  <li *ngFor="let log of clickLogs; let $index = index" [ngStyle]="{backgroundColor: log>=5?'green':'transparent'}" [ngClass]="{white: log>=5}"> {{ log }} === {{ $index }}</li>
+</ul>
